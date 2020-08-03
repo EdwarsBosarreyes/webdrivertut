@@ -1,0 +1,20 @@
+{
+  "name": "webdrivertut",
+  "version": "1.0.0",
+  "description": "WebDriver tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "test:awesome": "mocha --reporter mochawesome || true",
+    "open:report": "open mochawesome-report/mochawesome.html"
+  },
+  "author": "Edwars Bosarreyes",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^8.0.1",
+    "selenium-webdriver": "^4.0.0-alpha.7"
+  },
+  "devDependencies": {
+    "mochawesome": "^6.1.1"
+  }
+}
