@@ -1,6 +1,3 @@
-const { Builder, By, until } = require("selenium-webdriver"),
-  assert = require('assert');
-
 var Page  = require('../lib/home_page.js'); 
 var page; 
 
@@ -14,15 +11,12 @@ describe('Library app Scenarios with ' + browser, function () {
   });
 
   it('Typing valid Email changes button opacity to 1', async function () {
-    await page.requestBtn();
+    await page.writeEmail('input', 'user@fakemail.com');
+    await page.requestBtn('.btn', 'opacity');
   });
 
-  // it('Typing a valid email enables request button', async function () {
-  //   await page.requestBtn();
-  // });
-
   it('Clicking Request invitation trigres a confirmation alert', async function () {
-    await page.alertSuccess();
+    await page.alertSuccess('.alert-success');
   });
   after(() => page.quit());
 });
