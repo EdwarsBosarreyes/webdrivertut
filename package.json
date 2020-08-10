@@ -11,6 +11,7 @@
   "author": "Edwars Bosarreyes",
   "license": "ISC",
   "dependencies": {
+    "faker": "^4.1.0",
     "mocha": "^8.0.1",
     "selenium-webdriver": "^4.0.0-alpha.7"
   },

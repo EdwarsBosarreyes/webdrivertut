@@ -11,12 +11,11 @@ describe('Library app Scenarios with ' + browser, function () {
   });
 
   it('Typing valid Email changes button opacity to 1', async function () {
-    await page.writeEmail('input', 'user@fakemail.com');
-    await page.requestBtn('.btn', 'opacity');
+    await page.requestBtn();
   });
 
   it('Clicking Request invitation trigres a confirmation alert', async function () {
-    await page.alertSuccess('.alert-success');
+    await page.alertSuccess();
   });
   after(() => page.quit());
 });
